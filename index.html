@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./sass/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>To do list</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>TODO</h1>
+    <img src="./images/icon-moon.svg" alt="moon" class="light-mode" id="mode">
+  </header>
+  <main>
+    <input type="text" name="task" id="task" placeholder="Create new todo...">
+    <div id="tasks-div">
+     <!-- <div class="new-task">
+        <div class="check"></div>
+        <div class="task-text">
+          <p>New task</p>
+          <img src="./images/icon-cross.svg" alt="cross">
+        </div> -->
+      </div>
+    </div>
+    <div id="todo-div">
+      <span>5 items left</span>
+      <div class="organize">
+        <ul>
+          <li>
+            <input type='radio' value='all' name='radio' id='all' />
+            <label for='all'>All</label>
+          </li>
+          <li>
+            <input type='radio' value='active' name='radio' id='active' />
+            <label for='radio2'>Active</label>
+          </li>
+          <li>
+            <input type='radio' value='completed' name='radio' id='completed' />
+            <label for='radio3'>Completed</label>
+          </li>
+        </ul>
+      </div>
+      <span id="clear-completed">Clear completed</span>
+    </div>
+
+    <div id="organize-media">
+      <ul>
+        <li>
+          <input type='radio' value='all' name='radio' id='all' />
+          <label for='all'>All</label>
+        </li>
+        <li>
+          <input type='radio' value='active' name='radio' id='active' />
+          <label for='radio2'>Active</label>
+        </li>
+        <li>
+          <input type='radio' value='completed' name='radio' id='completed' />
+          <label for='radio3'>Completed</label>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>. -->
+    <script src="index.js"></script>
+</body>
+
+</html>

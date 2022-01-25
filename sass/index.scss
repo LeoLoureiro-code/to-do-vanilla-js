@@ -1,0 +1,208 @@
+@import "variables";
+
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: $fontFamily;
+    background-color: $body-background;
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+
+    @media screen and (min-width: 1200px) {
+        background-size: contain;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 5rem;
+
+    h1 {
+        font-size: 2.7rem;
+        letter-spacing: 0.4rem;
+        padding: 20px;
+        color: #fff;
+    }
+
+    img{
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 750px) {
+        width: 95%;
+    }
+}
+
+main {
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 650px;
+
+    @media screen and (max-width: 750px) {
+        width: 95%;
+    }
+
+    #task {
+        width: 100%;
+        height: 60px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 30px;
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+    #task::placeholder {
+        color: $a;
+        padding: 0 10px;
+    }
+
+    div:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
+
+.new-task {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(66, 66, 66, 0.226);
+    height: 60px;
+
+    .uncheck {
+        height: 30px;
+        width: 30px;
+        margin-right: 30px;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .check-img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    .check {
+        height: 30px;
+        width: 30px;
+        margin-right: 30px;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        cursor: pointer;
+    }
+
+    .complete {
+        text-decoration: line-through;
+    }
+
+    .task-text {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+#todo-div {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 0.9rem;
+
+    #clear-completed {
+        cursor: pointer;
+    }
+
+    .organize {
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+
+        @media screen and (max-width: 750px) {
+            display: none;
+            justify-content: space-between;
+        }
+
+        ul {
+            font-weight: 700;
+            list-style: none;
+
+            li {
+                display: inline-block;
+
+                input {
+                    visibility: hidden;
+                }
+
+                label {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#organize-media {
+    background-color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+
+    @media screen and (max-width: 750px){
+        display: flex;
+    }
+
+    ul {
+        font-weight: 700;
+        list-style: none;
+
+        li {
+            display: inline-block;
+
+            input {
+                visibility: hidden;
+            }
+
+            label {
+                cursor: pointer;
+            }
+        }
+    }
+}

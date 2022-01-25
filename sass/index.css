@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+html * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: whitesmoke;
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-size: contain;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+header h1 {
+  font-size: 2.7rem;
+  letter-spacing: 0.4rem;
+  padding: 20px;
+  color: #fff;
+}
+
+header img {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    width: 95%;
+  }
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 650px;
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    width: 95%;
+  }
+}
+
+main #task {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  font-size: 1rem;
+}
+
+main #task::-webkit-input-placeholder {
+  color: #cacde8;
+  padding: 0 10px;
+}
+
+main #task:-ms-input-placeholder {
+  color: #cacde8;
+  padding: 0 10px;
+}
+
+main #task::-ms-input-placeholder {
+  color: #cacde8;
+  padding: 0 10px;
+}
+
+main #task::placeholder {
+  color: #cacde8;
+  padding: 0 10px;
+}
+
+main div:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.new-task {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.226);
+  height: 60px;
+}
+
+.new-task .uncheck {
+  height: 30px;
+  width: 30px;
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.new-task .uncheck .check-img {
+  width: 50%;
+  height: 50%;
+}
+
+.new-task .check {
+  height: 30px;
+  width: 30px;
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
+  background: linear-gradient(#57ddff, #c058f3);
+  cursor: pointer;
+}
+
+.new-task .complete {
+  text-decoration: line-through;
+}
+
+.new-task .task-text {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.new-task .task-text img {
+  cursor: pointer;
+}
+
+#todo-div {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.9rem;
+}
+
+#todo-div #clear-completed {
+  cursor: pointer;
+}
+
+#todo-div .organize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 40%;
+}
+
+@media screen and (max-width: 750px) {
+  #todo-div .organize {
+    display: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#todo-div .organize ul {
+  font-weight: 700;
+  list-style: none;
+}
+
+#todo-div .organize ul li {
+  display: inline-block;
+}
+
+#todo-div .organize ul li input {
+  visibility: hidden;
+}
+
+#todo-div .organize ul li label {
+  cursor: pointer;
+}
+
+#organize-media {
+  background-color: #fff;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 750px) {
+  #organize-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#organize-media ul {
+  font-weight: 700;
+  list-style: none;
+}
+
+#organize-media ul li {
+  display: inline-block;
+}
+
+#organize-media ul li input {
+  visibility: hidden;
+}
+
+#organize-media ul li label {
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */
