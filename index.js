@@ -1,4 +1,4 @@
-const task = document.getElementById('task')
+const task = document.getElementById('task-input')
 const tasksDiv = document.getElementById('tasks-div')
 const darkLightMode = document.getElementById('mode')
 const tasksInput = document.getElementsByClassName('new-task')
@@ -16,6 +16,8 @@ const lightDark ={
     dark: {
         background: "hsl(235, 21%, 11%)",
         inputBackground: "hsl(235, 24%, 19%)",
+        borderBottom:"",
+        inputText: "",
         
     }
 }
