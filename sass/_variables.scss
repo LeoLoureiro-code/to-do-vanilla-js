@@ -1,29 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 $fontFamily: 'Josefin Sans', sans-serif;
-$body-background: hsl(0, 0%, 96%);
 
 //Primary
-$organize-task-color: hsl(220, 98%, 61%);
+
 $linear-gradient1: hsl(192, 100%, 67%); 
 $linear-gradient2: hsl(280, 87%, 65%);
 
 //Light theme
+$body-background: hsl(0, 0%, 96%);
 $input-background: hsl(0, 0%, 98%);
-$items-left: hsl(236, 33%, 92%);
-$Light-Grayish-Blue: hsl(233, 11%, 84%);
-$complete-task: hsl(236, 9%, 61%);
-$organize-task-hover: hsl(235, 19%, 35%);
+$input-text: hsl(236, 9%, 61%);
+$tasks-border: hsl(228, 3%, 70%);
+$text-completed: hsl(230, 5%, 78%);
+$options: hsl(0, 0%, 56%);
+$options-hover: hsl(235, 19%, 35%);
 
 //Dark theme
-$dark-body-background: hsl(235, 21%, 11%);
-$tasks-background: hsl(235, 24%, 19%);
-$tasks-border: hsl(234, 39%, 85%);
-$text-color: hsl(236, 33%, 92%);
-$organize-task-color-dark: hsl(234, 11%, 52%);
-$Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-$Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
-
-:export{
-    
-}
+$body-background-dark: hsl(235, 21%, 11%);
+$input-background-dark: hsl(235, 24%, 19%);
+$input-text-dark: hsl(236, 33%, 92%);
+$tasks-border-dark: hsl(234, 39%, 85%);
+$options-dark: hsl(234, 11%, 52%);
+$options-hover-dark: hsl(220, 98%, 61%);
+// $text-color-dark: hsl(233, 14%, 35%);
+// $Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);

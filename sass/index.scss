@@ -45,7 +45,7 @@ header {
     }
 }
 
-main {
+.content {
     margin: 0 auto;
     margin-top: 4rem;
     width: 650px;
@@ -54,7 +54,7 @@ main {
         width: 95%;
     }
 
-    #task {
+    .task {
         width: 100%;
         height: 60px;
         border-radius: 5px;
@@ -62,15 +62,31 @@ main {
         margin-bottom: 30px;
         padding: 10px 30px;
         font-size: 1rem;
-    }
-    #task::placeholder {
-        color: $a;
-        padding: 0 10px;
+        font-weight: 600;
     }
 
-    div:first-child {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+    
+    .task::placeholder {
+        font-weight: 550;
+        color: $input-text;
+    }
+
+    .tasks> div:first-child{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px
+    }
+        
+}
+
+.content-dark{
+    @extend .content;
+
+    .task{
+        color: $input-text-dark;
+    }
+
+    .tasks::placeholder {
+        color: $input-text-dark;
     }
 }
 
@@ -118,6 +134,7 @@ main {
 
     .complete {
         text-decoration: line-through;
+        color: $text-completed;
     }
 
     .task-text {
@@ -132,7 +149,29 @@ main {
     }
 }
 
-#todo-div {
+.new-task-dark{
+    @extend .new-task;
+    background-color: $body-background-dark;
+    border-bottom: 1px solid $tasks-border-dark;
+
+    .uncheck {
+        border: 1px solid $tasks-border;
+    }
+
+    .check {
+        border: 1px solid $tasks-border;
+    }
+
+    .complete {
+        color: $tasks-border;
+    }
+
+    .task-text {
+        color: $input-text-dark;
+    }
+}
+
+.todo {
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -144,7 +183,13 @@ main {
 
     #clear-completed {
         cursor: pointer;
+        color: $options;
     }
+
+          
+      span{
+        color: $options;
+      }
 
     .organize {
         display: flex;
@@ -159,6 +204,7 @@ main {
         ul {
             font-weight: 700;
             list-style: none;
+            color: $options;
 
             li {
                 display: inline-block;
@@ -168,6 +214,7 @@ main {
                 }
 
                 label {
+                    
                     cursor: pointer;
                 }
             }
@@ -176,7 +223,7 @@ main {
 }
 
 #organize-media {
-    background-color: #fff;
+    background-color: $input-background;
     display: none;
     align-items: center;
     justify-content: space-around;
@@ -192,7 +239,7 @@ main {
     ul {
         font-weight: 700;
         list-style: none;
-
+        color: $options;
         li {
             display: inline-block;
 
@@ -202,6 +249,7 @@ main {
 
             label {
                 cursor: pointer;
+                
             }
         }
     }
