@@ -6,7 +6,7 @@ html * {
           box-sizing: border-box;
 }
 
-body {
+.body, .body-dark {
   height: 100vh;
   width: 100vw;
   font-family: "Josefin Sans", sans-serif;
@@ -18,9 +18,14 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  body {
+  .body, .body-dark {
     background-size: contain;
   }
+}
+
+.body-dark {
+  background-color: #161722;
+  background-image: url(../images/bg-desktop-dark.jpg);
 }
 
 header {
@@ -104,6 +109,7 @@ header img {
 }
 
 .content-dark .task {
+  background-color: #25273c;
   color: #e4e5f1;
 }
 
@@ -226,7 +232,7 @@ header img {
   color: #e4e5f1;
 }
 
-.todo {
+.todo, .todo-dark {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,16 +248,16 @@ header img {
   font-size: 0.9rem;
 }
 
-.todo #clear-completed {
+.todo #clear-completed, .todo-dark #clear-completed {
   cursor: pointer;
   color: #8f8f8f;
 }
 
-.todo span {
+.todo span, .todo-dark span {
   color: #8f8f8f;
 }
 
-.todo .organize {
+.todo .organize, .todo-dark .organize {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +268,7 @@ header img {
 }
 
 @media screen and (max-width: 750px) {
-  .todo .organize {
+  .todo .organize, .todo-dark .organize {
     display: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -270,22 +276,35 @@ header img {
   }
 }
 
-.todo .organize ul {
+.todo .organize ul, .todo-dark .organize ul {
   font-weight: 700;
   list-style: none;
   color: #8f8f8f;
 }
 
-.todo .organize ul li {
+.todo .organize ul li, .todo-dark .organize ul li {
   display: inline-block;
 }
 
-.todo .organize ul li input {
+.todo .organize ul li input, .todo-dark .organize ul li input {
   visibility: hidden;
 }
 
-.todo .organize ul li label {
+.todo .organize ul li label, .todo-dark .organize ul li label {
   cursor: pointer;
+}
+
+.todo-dark {
+  background-color: #25273c;
+}
+
+.todo-dark #clear-completed {
+  cursor: pointer;
+  color: #777a92;
+}
+
+.todo-dark span {
+  color: #777a92;
 }
 
 #organize-media {

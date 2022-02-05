@@ -6,7 +6,7 @@ html * {
     box-sizing: border-box;
 }
 
-body {
+.body {
     height: 100vh;
     width: 100vw;
     font-family: $fontFamily;
@@ -19,6 +19,13 @@ body {
     @media screen and (min-width: 1200px) {
         background-size: contain;
     }
+}
+
+.body-dark{
+    @extend .body;
+
+    background-color: $body-background-dark;
+    background-image: url(../images/bg-desktop-dark.jpg);
 }
 
 header {
@@ -82,6 +89,7 @@ header {
     @extend .content;
 
     .task{
+        background-color: $input-background-dark;
         color: $input-text-dark;
     }
 
@@ -90,7 +98,7 @@ header {
     }
 }
 
-.new-task {
+#new-task {
     position: relative;
     display: flex;
     align-items: center;
@@ -149,7 +157,7 @@ header {
     }
 }
 
-.new-task-dark{
+#new-task-dark{
     @extend .new-task;
     background-color: $body-background-dark;
     border-bottom: 1px solid $tasks-border-dark;
@@ -220,6 +228,22 @@ header {
             }
         }
     }
+}
+
+.todo-dark{
+    @extend .todo;
+
+    background-color: $input-background-dark;
+
+    #clear-completed {
+        cursor: pointer;
+        color: $options-dark;
+    }
+
+          
+      span{
+        color: $options-dark;
+      }
 }
 
 #organize-media {
